@@ -1,0 +1,22 @@
+{
+    "name": "ui_wired_login/pkg",
+    "description": "samer customize for laravel livewire ui login 'livewire/livewire laravel-frontend-presets/tall'",
+    "type": "library",
+    "require": {
+        "laravel-frontend-presets/tall": "^8.0",
+        "livewire/livewire": "^3.5"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "uilogin\\pkg\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "samer tawil",
+            "email": "eng.samertawil@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
