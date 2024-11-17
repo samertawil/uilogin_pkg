@@ -36,5 +36,10 @@ class UiloginServiceProvider extends ServiceProvider
         ]);
     
 
+        $this->publishes([
+            __DIR__.'/../routes/auth.php' => base_path('routes/uiauth.php'),
+        ]);
+    
+
     }
 }
