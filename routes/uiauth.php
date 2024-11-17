@@ -3,9 +3,9 @@
  
  
  
-use uilogin\pkg\Http\Livewire\ui_auth\Login;
+use App\Livewire\Uilogin\Login;
 use Illuminate\Support\Facades\Route;
-use uilogin\pkg\Http\Livewire\ui_auth\Register;
+use App\Livewire\Uilogin\Register;
  
  
 

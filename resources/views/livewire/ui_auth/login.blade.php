@@ -49,7 +49,7 @@
                                 <x-uilogin-checkbox wire:model='remember' name="remember" label="yes"></x-uilogin-checkbox>
                               
                        
-                               <x-uilogin-button :name="__('uilogin::uilogin.Login')" divlclass="d-grid gap-2" class="bg-primary text-white"></x-uilogin-button>
+                               <x-uilogin-button :name="__('uilogin.Login')" divlclass="d-grid gap-2" class="bg-primary text-white"></x-uilogin-button>
 
                                <button class="btn btn-danger" wire:click='test' >here</button>
 

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace uilogin\pkg\Http\Livewire\ui_auth;
+namespace App\Livewire\Uilogin;
 
 use Livewire\Component;
 use Livewire\Attributes\Layout;
@@ -59,10 +59,10 @@ class Login extends Component
         return redirect()->intended(route('home'));
     }
 
-     #[Layout('uilogin::components.layouts.uilogin-app')]
+     #[Layout('components.layouts.uilogin-app')]
     public function render()
     {
     
-        return view('uilogin::livewire.ui_auth.login');
+        return view('livewire.ui_auth.login');
     }
 }
