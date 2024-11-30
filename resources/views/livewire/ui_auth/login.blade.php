@@ -34,7 +34,7 @@
 
                         <div class="card-header "> <span> تسجيل الدخول </span>  <a  class="text-decoration-none" style="float: left;"
                              href="#">حول النظام؟</a>  </div>
-                        @include('uilogin::layouts._alert-session')
+                        @include('layouts._alert-session')
                         <div class="card-body">
                           
                             <form wire:submit="authenticate">
