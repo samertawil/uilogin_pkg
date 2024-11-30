@@ -3,8 +3,10 @@
     "description": "samer customize for laravel livewire ui login 'livewire/livewire laravel-frontend-presets/tall'",
     "type": "library",
     "require": {
+        "php": "^8.2",
         "laravel-frontend-presets/tall": "^8.0",
-        "livewire/livewire": "^3.5"
+        "livewire/livewire": "^3.5",
+        "mews/captcha": "^3.4"
     },
     "license": "MIT",
     "autoload": {
