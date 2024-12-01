@@ -54,7 +54,7 @@
                  <div class="row mb-3 ">
 
                      <div class="col-6 text-start">
-                         <a href="#" type="submit" class="btn btn-primary">
+                         <a href="{{route('uilogin.login')}}" wire:navigate  type="submit" class="btn btn-primary">
                              العودة للرئيسية
                          </a>
                      </div>

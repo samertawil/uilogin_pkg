@@ -68,7 +68,7 @@
                             </div>
                             <div class="my-4">
 
-                                <a href="#"
+                                <a href="{{route('support.create')}}" wire:navigate
                                     class="text-decoration-none">{{ __('uilogin.get-help') }}</a>
                             </div>
                         </div>

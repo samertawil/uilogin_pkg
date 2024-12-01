@@ -24,6 +24,11 @@ class UiloginServiceProvider extends ServiceProvider
             [__DIR__ . '/../config/techsupport.php' => config_path('techsupport.php'),],
             'config'
         );
+		
+		    $this->publishes(
+            [__DIR__ . '/../config/captcha.php' => config_path('captcha.php'),],
+            'config'
+        );
 
         $this->publishes(
             [__DIR__ . '/../resources/views' => resource_path('views'),],
