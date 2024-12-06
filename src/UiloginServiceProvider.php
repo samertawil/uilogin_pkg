@@ -16,14 +16,18 @@ class UiloginServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->loadMigrationsFrom(__DIR__ . '/../migrations');
-        //  $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
-        //  $this->loadViewsFrom(__DIR__ . '/../resources/views', 'uilogin');
-        //  $this->loadTranslationsFrom(__DIR__.'/../lang','uilogin');
+        
 
         $this->publishes(
-            [__DIR__ . '/../config/techsupport.php' => config_path('techsupport.php'),],
+            [__DIR__ . '/../config/techsupport_en.php' => config_path('techsupport_en.php'),],
             'config'
         );
+
+        $this->publishes(
+            [__DIR__ . '/../config/techsupport_ar.php' => config_path('techsupport_ar.php'),],
+            'config'
+        );
+
 		
         $this->publishes(
             [__DIR__ . '/../database/' => database_path(''),],
