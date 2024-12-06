@@ -25,6 +25,11 @@ class UiloginServiceProvider extends ServiceProvider
             'config'
         );
 		
+        $this->publishes(
+            [__DIR__ . '/../database/' => database_path(''),],
+            'database'
+        );
+
 		    $this->publishes(
             [__DIR__ . '/../config/captcha.php' => config_path('captcha.php'),],
             'config'
@@ -45,6 +50,11 @@ class UiloginServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/Http/Livewire' => app_path('Livewire'),
         ]);
+
+        $this->publishes([
+            __DIR__.'/Http/Middleware' => app_path('Middleware'),
+        ]);
+
 
         $this->publishes([
             __DIR__.'/Http/Models' => app_path('Models'),

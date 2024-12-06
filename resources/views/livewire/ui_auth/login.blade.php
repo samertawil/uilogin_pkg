@@ -32,16 +32,16 @@
                 <div class="col-md-6">
                     <div class="card ">
 
-                        <div class="card-header "> <span> تسجيل الدخول </span>  <a  class="text-decoration-none" style="float: left;"
-                             href="#">حول النظام؟</a>  </div>
-                        @include('layouts._alert-session')
+                        <div class="card-header "> <span> {{__('uilogin.login_system')}} </span>  <a  class="text-decoration-none" style="float: left;"
+                             href="#">{{__('uilogin.about_system')}}</a>  </div>
+                        @include('uilogin::layouts._alert-session')
                         <div class="card-body">
                           
                             <form wire:submit="authenticate">
                             
                            
-                                 <x-uilogin-input wire:model="user_name" name="user_name" label="yes" divlclass="col-lg-12" dir="ltr"  required autofocus > </x-uilogin-input>
-                               
+                                 <x-uilogin-input  wire:model="user_name" name="user_name" label="yes" divlclass="col-lg-12" dir="ltr"  required autofocus > </x-uilogin-input>
+                             
                                   
                                 <x-uilogin-input wire:model="password"  type="password" name="password"  label="yes" divlclass="col-lg-12" dir="ltr"  required  > </x-uilogin-input>
 
@@ -59,7 +59,7 @@
                             <div class="d-md-flex justify-content-between">
                                 <div class="mb-4" id="change_id">
                                     <a href="#"  id="btn1"
-                                        class="text-decoration-none ">{{ __('uilogin.Forgot Your Password') }} ؟ </a>
+                                        class="text-decoration-none ">{{ __('uilogin.Forgot Your Password') }} </a>
                                 </div>
                                
                                   <a href="{{route('uilogin.register')}}" wire:navigate
@@ -68,7 +68,7 @@
                             </div>
                             <div class="my-4">
 
-                                <a href="{{route('support.create')}}" wire:navigate
+                                <a href="#"
                                     class="text-decoration-none">{{ __('uilogin.get-help') }}</a>
                             </div>
                         </div>

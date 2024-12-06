@@ -14,7 +14,7 @@
     'id' => '',
     'divWidth' => '3',
     'divlclass' => '',
-    'ChoseTitle' => 'اختار',
+    'ChoseTitle' => 'choose',
     'divId'=>null,
     'jsSelect2'=>null,
     'wireIgone'=>null,
@@ -41,7 +41,7 @@
         <select   id="{{ $id }}" name="{{ $name }}" dir={{ $dir }} 
             title="{{ $title }}"
             {{ $attributes->class(['form-control ', 'is-invalid' => $errors->has($name)]) }}>
-            <option value="">{{ $ChoseTitle }}</option>
+               <option value="">{{ __("uilogin.$ChoseTitle") }}</option>
 
             @foreach ($options as $key => $value)
                 <option value="{{ $key }}" @selected(old($name) ? old($name) == $key : '')>

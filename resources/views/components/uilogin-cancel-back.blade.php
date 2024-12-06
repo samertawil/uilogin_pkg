@@ -1,11 +1,11 @@
 @props([
     'route'=>'',
-    'name'=>'إلغاء وروجوع',
+    'label'=>'إلغاء وروجوع',
 ]) 
 
-<div class="text-end">
+<div>
     <a href="{{$route}}"  
-    {{$attributes->class(['text-decoration-none text-end', ])}} >
+    {{$attributes->class(['text-decoration-none', ])}} >
    
-     {{$name}} </a>
+     {{__("uilogin.$label")}} </a>
 </div>

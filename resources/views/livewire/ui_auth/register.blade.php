@@ -6,7 +6,7 @@
          <div class="row justify-content-center">
              <div class="col-md-4">
                  <div class="card">
-                     <div class="card-header">تسجيل حساب جديد</div>
+                     <div class="card-header">{{__('uilogin.register_new_account')}}</div>
 
                      <div class="card-body">
                  
@@ -22,9 +22,11 @@
  
                              <x-uilogin-input wire:model.live='email' name="email" label="yes" divlclass='col-lg-12' dir="ltr"></x-uilogin-input>
 
-                             <x-uilogin-select-parts-date></x-select-parts-date>
-                            
+                             {{-- <x-uilogin-select-parts-date></x-select-parts-date> --}}
 
+                                <x-uilogin-select wire:model='question' name="question1" label  divlclass='col-lg-12' ></x-uilogin-select>
+                            
+                
                              <x-uilogin-input wire:model='password' type="password" name="password" label="yes"  autocomplete="new-password" divlclass='col-lg-12'></x-uilogin-input>
 
                              <x-uilogin-input wire:model.live='passwordConfirmation' name="passwordConfirmation" id="password_confirmation" type="password" label="yes"  autocomplete="new-password" divlclass='col-lg-12'></x-uilogin-input>
@@ -33,7 +35,7 @@
                              <x-uilogin-button :name="__('uilogin.register_new_account')" class="bg-primary text-white" divlclass="d-grid gap-2" ></x-uilogin-button>
 
                    
-                           <x-uilogin-cancel-back :route="route('uilogin.login')" wire:navigate ></x-uilogin-cancel-back>
+                           <x-uilogin-cancel-back :route="route('uilogin.login')" wire:navigate  label="cancel_back"></x-uilogin-cancel-back>
                          </form>
                      </div>
                  </div>

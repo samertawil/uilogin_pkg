@@ -9,38 +9,23 @@ use App\Models\TechnicalSupport;
 
 class TechSupportCreate extends Component
 {
-    #[Validate('required', message: 'الرجاء ادخال اسم مقدم الطلب')]
-    public  $name;
+    #[Validate(['required'])]
+    public  $providerName;
     public  $user_name;
-    #[Validate('nullable')]
-    #[Validate('numeric', message: 'ادخال ارقام فقط')]
-    #[Validate('min_digits:10', message: 'خطا برقم الهاتف , اقل من 10 ارقام')]
-    #[Validate('max_digits:15', message: 'خطا برقم الهاتف , اكثر من 15 رقم')]
+    #[Validate(['nullable','numeric','min_digits:10','max_digits:15'])]
     public $mobile;
-    #[Validate('required', message: 'الرجاء ادخال نوع الدعم المطلوب  الطلب')]
+    #[Validate(['required'])]
     public $subject_id;
-    #[Validate('required', message: 'الرجاء ادخال اسم تفصيل الطلب')]
+    #[Validate(['required'])]
     public $issue_description;
-
+    #[Validate(['required','captcha'])]
     public $captcha;
-
 
     public function create()
     {
        $this->validate();
 
-        $validate_rules=[
-            'captcha' => ['required', 'captcha'],
-        ];
-
-        $validate_message=[
-            'captcha.required'=>'الرجاء ادخال كود التحقق',
-            'captcha.captcha'=>'خطأ في كود التحقق , يرجي المحاولة مرة اخرى',
-        ];
-
-        $this->validate( $validate_rules , $validate_message);
-
-      
+            
         $data = TechnicalSupport::create([
             'name' => $this->name,
             'user_name' => $this->user_name,
