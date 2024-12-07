@@ -16,7 +16,7 @@
 
 
                         <div class="text-center pt-2">
-                            <strong> النظام الاداري </strong>
+                            <strong>{{__('uilogin.login_system')}}</strong>
                         </div>
 
                     </div>

@@ -23,7 +23,29 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     @endif
 
+    <style>
+        @font-face {
+            font-family: 'Droid';
 
+            src: url({{ asset('uilogin-assets/fonts/ar/Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf') }});
+
+        }
+
+
+        @font-face {
+            font-family: 'NotoSans';
+
+            src: url({{ asset('uilogin-assets/fonts/en/NotoSans-Regular.ttf') }});
+        }
+
+
+        body {
+
+            margin: 0;
+            font-family: 'Droid', 'NotoKufiArabic', 'NotoSans', 'Courier New', Courier, monospace !important;
+
+        }
+    </style>
     {{-- @include('layouts.head') --}}
     <title>{{ $title ?? 'Page Title' }}</title>
 </head>

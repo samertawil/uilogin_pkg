@@ -78,5 +78,9 @@ class UiloginServiceProvider extends ServiceProvider
         );
 
 
+        $this->publishes([
+            __DIR__.'/../uilogin-assets' => public_path('uilogin-assets'),
+        ]);
+    
     }
 }
