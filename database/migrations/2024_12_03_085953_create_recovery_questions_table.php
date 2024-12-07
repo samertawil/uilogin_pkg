@@ -13,11 +13,8 @@ return new class extends Migration
     {
         Schema::create('recovery_questions', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
-            $table->string('ar_question')->unique();
-            $table->string('en_question')->unique();
-            // $table->string('answer');
-            // $table->unique(['question','user_id']);
+             $table->string('question_ar')->unique();
+            $table->string('question_en')->unique();
             $table->timestamps();
         });
     }
