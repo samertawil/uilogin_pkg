@@ -37,7 +37,7 @@
                         </div>
 
 
-                        @include('uilogin::layouts._alert-session')
+                        @include('layouts._alert-session')
                         <div class="card-body">
 
                             <form wire:submit="authenticate">
