@@ -1,6 +1,6 @@
 <?php
 
-namespace uilogin\pkg\Http\Livewire\Uilogin;
+namespace App\Livewire\Uilogin;
 
 use Livewire\Component;
 use Illuminate\Support\Str;
