@@ -50,6 +50,7 @@ return [
     'Change_Password'=>'Change Password',
     'wrongAnswer'=>'Wrong Answers',
     'FailToResetPassword'=>'Fail To ResetPassword',
+    'noQuestions'=>'No Questions',
     
    
 ];

@@ -35,40 +35,48 @@
                                         <x-uilogin-button :name="__('uilogin.send')" class="bg-primary text-white"
                                             divlclass="d-grid gap-2"></x-uilogin-button>
                                     @elseif ($this->resetType == 'questions')
-                                        @php
-                                            $question = 'question_' . app()->getLocale();
+                                        @if (!$errors->has('noQuestions'))
+                                            @php
+                                                $question = 'question_' . app()->getLocale();
 
-                                        @endphp
-                                        <p>{{ $this->question1->questions->$question }}</p>
+                                            @endphp
 
-                                        <x-uilogin-input wire:model='answer1' name="answer1" label="yes"
-                                            divlclass='col-lg-12' req></x-uilogin-input>
+                                            <p>{{ $this->question1->questions->$question ?? '' }}</p>
 
-                                        <p>{{ $this->question2->questions->$question }}</p>
+                                            <x-uilogin-input wire:model='answer1' name="answer1" label="yes"
+                                                divlclass='col-lg-12' req></x-uilogin-input>
 
-                                        <x-uilogin-input wire:model='answer2' name="answer2" label="yes"
-                                            divlclass='col-lg-12' req></x-uilogin-input>
+                                            <p>{{ $this->question2->questions->$question ?? '' }}</p>
 
-                                        <p>{{ $this->question3->questions->$question }}</p>
+                                            <x-uilogin-input wire:model='answer2' name="answer2" label="yes"
+                                                divlclass='col-lg-12' req></x-uilogin-input>
 
-                                        <x-uilogin-input wire:model='answer3' name="answer3" label="yes"
-                                            divlclass='col-lg-12' req></x-uilogin-input>
+                                            <p>{{ $this->question3->questions->$question ?? '' }}</p>
+
+                                            <x-uilogin-input wire:model='answer3' name="answer3" label="yes"
+                                                divlclass='col-lg-12' req></x-uilogin-input>
 
 
-                                        <x-uilogin-button :name="__('uilogin.checkAnswers')" wire:click.prevent='checkAnswers'
-                                            class="bg-primary text-white" divlclass="d-grid gap-2"></x-uilogin-button>
+                                            <x-uilogin-button :name="__('uilogin.checkAnswers')" wire:click.prevent='checkAnswers'
+                                                class="bg-primary text-white"
+                                                divlclass="d-grid gap-2"></x-uilogin-button>
+                                        @else
+                                            <div class="w-100 bg-danger text-white text-center">
+                                                <p>{{ __('uilogin.noQuestions') }}</p>
+                                            </div>
+                                        @endif
 
                                         @if ($errors->has('checkAnswers'))
                                             <div class="w-100 bg-danger text-white text-center">
                                                 <p>{{ __('uilogin.wrongAnswer') }}</p>
                                             </div>
                                         @endif
-                                        
+
                                         @if ($errors->has('FailToResetPassword'))
-                                        <div class="w-100 bg-danger text-white text-center">
-                                            <p>{{ __('uilogin.FailToResetPassword') }}</p>
-                                        </div>
-                                    @endif
+                                            <div class="w-100 bg-danger text-white text-center">
+                                                <p>{{ __('uilogin.FailToResetPassword') }}</p>
+                                            </div>
+                                        @endif
 
                                         @if ($this->checkResult == 1)
                                             <x-uilogin-input wire:model.live='password' type="password" name="password"
@@ -82,7 +90,8 @@
 
 
                                             <x-uilogin-button :name="__('uilogin.Change_Password')" class="bg-primary text-white"
-                                                divlclass="d-grid gap-2" wire:click.prevent='changePassword'></x-uilogin-button>
+                                                divlclass="d-grid gap-2"
+                                                wire:click.prevent='changePassword'></x-uilogin-button>
                                         @endif
                                     @endif
 

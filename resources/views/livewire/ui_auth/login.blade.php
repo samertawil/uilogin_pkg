@@ -65,7 +65,7 @@
 
                             <div class="d-md-flex justify-content-between">
                                 <div class="mb-4" id="change_id">
-                                    <a href="#" id="btn1"
+                                    <a href="{{route('uilogin.forgetpassword')}}" id="btn1"
                                         class="text-decoration-none ">{{ __('uilogin.Forgot Your Password') }}</a>
                                 </div>
 

@@ -49,6 +49,7 @@ return [
     'Change_Password'=>'تغير كلمة المرور',
     'wrongAnswer'=>'خطأ بأجوبة الأسئلة',
     'FailToResetPassword'=>'خطأ في عملية اعادة تعيين كلمة المرور',
+    'noQuestions'=>'لا توجد اسئلة استرجاع',
     
 
 ];

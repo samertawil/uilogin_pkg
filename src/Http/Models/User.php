@@ -1,6 +1,6 @@
 <?php
 
-namespace uilogin\pkg\Http\Models;
+namespace App\Models;
 
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;

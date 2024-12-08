@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Livewire\Uilogin;
+namespace uilogin\pkg\Http\Livewire\Uilogin;
 
 use Livewire\Component;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Validate;
-use App\Models\User;
+use uilogin\pkg\Http\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use App\Models\RecoveryAnswer;
+use uilogin\pkg\Http\Models\RecoveryAnswer;
 
 class ForgetPassword extends Component
 {
@@ -57,9 +57,20 @@ class ForgetPassword extends Component
             $this->resetType = 'questions';
             if ($this->user) {
                 $this->userQuestions = RecoveryAnswer::where('user_id', $this->user->id)->get();
-                $this->question1 = $this->userQuestions[0];
-                $this->question2 = $this->userQuestions[1];
-                $this->question3 = $this->userQuestions[2];
+ 
+                if( ! ($this->userQuestions->isEmpty()))   {
+                    
+                    $this->question1 = $this->userQuestions[0];
+                    $this->question2 = $this->userQuestions[1];
+                    $this->question3 = $this->userQuestions[2];
+                }
+                else {
+                   
+                      $this->addError('noQuestions',__('uilogin.noQuestions'));
+
+                      return;
+                }
+             
             }
         }
     }
