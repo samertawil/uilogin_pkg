@@ -13,7 +13,7 @@
                          <form wire:submit='create'>
 
 
-                             <x-uilogin-input  name="providerName" wire:model='name' label :labelname="__('uilogin.providerName')" req
+                             <x-uilogin-input  name="name" wire:model='name' label :labelname="__('uilogin.providerName')" req
                                  divWidth="12"></x-uilogin-input>
 
                              <x-uilogin-input name="user_name" wire:model='user_name' label :labelname="__('uilogin.accountName')"

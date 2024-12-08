@@ -75,7 +75,7 @@
                             </div>
                             <div class="my-4">
 
-                                <a href="#" class="text-decoration-none">{{ __('uilogin.get-help') }}</a>
+                                <a href="{{route('support.create')}}" class="text-decoration-none">{{ __('uilogin.get-help') }}</a>
                             </div>
                         </div>
                     </div>

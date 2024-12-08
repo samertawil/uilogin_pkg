@@ -10,7 +10,7 @@ use App\Models\TechnicalSupport;
 class TechSupportCreate extends Component
 {
     #[Validate(['required'])]
-    public  $providerName;
+    public  $name;
     public  $user_name;
     #[Validate(['nullable','numeric','min_digits:10','max_digits:15'])]
     public $mobile;
