@@ -35,12 +35,21 @@ return [
     'answers.0'=>'First Question Answer',
     'answers.1'=>'Seconde Question Answer',
     'answers.2'=>'Third Question Answer',
+    'answer1'=>'First Question Answer',
+    'answer2'=>'Seconde Question Answer',
+    'answer3'=>'Third Question Answer',
     'recoveryQuestions'=>'These Questions Will Used In Case Forget Your Password',
     'providerName'=>'Send From',
     'accountName'=>'Account Name ',
     "mobileDetails"=>'Number Format 05x-1234567',
     "help-type"=>'How We Can Help You',
     'send'=>'Send',
+    'mr/s'=>'Mr/s',
+    'send to email'=>'Will send confirmation code to email',
+    'checkAnswers'=>'Check Answers',
+    'Change_Password'=>'Change Password',
+    'wrongAnswer'=>'Wrong Answers',
+    'FailToResetPassword'=>'Fail To ResetPassword',
     
    
 ];

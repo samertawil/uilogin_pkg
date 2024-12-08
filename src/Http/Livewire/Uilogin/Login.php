@@ -25,9 +25,9 @@ class Login extends Component
         'user_name.exists' => 'خطأ باسم المستخدم',
     ];
 
-    public function test() {
-        dd(1);
-    }
+ 
+    
+ 
     public function authenticate()
     {
 
