@@ -7,10 +7,10 @@ use Illuminate\Support\Str;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Validate;
-use uilogin\pkg\Http\Models\User;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use uilogin\pkg\Http\Models\RecoveryAnswer;
+use App\Models\RecoveryAnswer;
 
 class ForgetPassword extends Component
 {
@@ -124,9 +124,9 @@ class ForgetPassword extends Component
         $this->validateOnly($prop);
     }
 
-    #[Layout('uilogin::components.layouts.uilogin-app')]
+    #[Layout('components.layouts.uilogin-app')]
     public function render()
     {
-        return view('uilogin::livewire.ui_auth.forget-password');
+        return view('livewire.ui_auth.forget-password');
     }
 }
