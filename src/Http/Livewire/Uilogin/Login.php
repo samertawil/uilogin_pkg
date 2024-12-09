@@ -25,7 +25,7 @@ class Login extends Component
     {
 
        
-        $this->validate($this->rules, $this->messages);
+        $this->validate();
 
         $user = User::user($this->user_name);
 

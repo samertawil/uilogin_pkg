@@ -18,12 +18,16 @@ class TechSupportCreate extends Component
     public $subject_id;
     #[Validate(['required'])]
     public $issue_description;
-    #[Validate(['required','captcha'])]
+
     public $captcha;
 
     public function create()
     {
        $this->validate();
+       
+       $this->validate([
+        'captcha'=>['required','captcha']
+       ]);
 
             
         $data = TechnicalSupport::create([
