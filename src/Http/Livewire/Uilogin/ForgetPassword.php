@@ -86,7 +86,7 @@ class ForgetPassword extends Component
             $this->checkResult = 1;
         } else {
 
-            $this->addError('checkAnswers', "");
+            $this->addError('wrongAnswer',__('uilogin.wrongAnswer'));
 
             return;
 

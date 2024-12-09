@@ -66,7 +66,7 @@
                                             </div>
                                         @endif
 
-                                        @if ($errors->has('checkAnswers'))
+                                        @if ($errors->has('wrongAnswer'))
                                             <div class="w-100 bg-danger text-white text-center">
                                                 <p>{{ __('uilogin.wrongAnswer') }}</p>
                                             </div>
