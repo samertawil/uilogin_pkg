@@ -3,30 +3,23 @@
 
 namespace App\Livewire\Uilogin;
 
+use App\Models\User;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
-use uilogin\pkg\Http\Models\User;
+use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 
 class Login extends Component
 {
 
     public $email = '';
+    #[Validate(['required'])]
     public $password = '';
     public $remember = false;
+    #[Validate(['required','exists:users,user_name'])]
     public $user_name = '';
 
-    protected $rules = [
-        'user_name' => ['required', 'exists:users,user_name'],
-        'password' => ['required'],
-    ];
-
-    protected $messages = [
-        'user_name.exists' => 'خطأ باسم المستخدم',
-    ];
-
  
-    
  
     public function authenticate()
     {

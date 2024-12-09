@@ -1,5 +1,5 @@
 {
-    "name": "ui_wired_login/pkg",
+    "name": "ui-wired-login/pkg",
     "description": "samer customize for laravel livewire ui login 'livewire/livewire laravel-frontend-presets/tall'",
     "type": "library",
     "require": {

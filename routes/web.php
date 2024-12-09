@@ -10,5 +10,5 @@ Route::get('/test',function() {
 
 
   include __DIR__.'/uiauth.php' ;
-  include __DIR__.'/support.php';
+ 
 
